@@ -1,54 +1,452 @@
+/* === GLOBAL STYLES === */
+
+
+/* Reset default browser styles */
+
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background-color: rgb(37, 37, 37);
-    padding: 20px;
-    border-bottom: 5px solid blue;
+
+/* Body styling with dark background */
+
+body {
+    background: linear-gradient(rgba(11, 24, 37, 0.8), rgba(13, 27, 42, 0.8)), url('image.png') no-repeat center center/cover;
+    color: #e0e0e0;
+    /* Light text for contrast */
+    line-height: 1.6;
 }
 
 .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* === HEADER STYLES === */
+
+
+/* Header with dark blue background */
+
+header {
+    background-color: #0d1b2a;
+    /* Dark blue */
+    color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid darkgreen;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    margin: 20px;
 }
 
 .logo {
-    color: blue;
-    font-size: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 10px 10px 10px darkgreen;
 }
+
+.logo span {
+    color: #ffd700;
+    /* Gold accent */
+}
+
+
+/* Navigation styles */
 
 nav ul {
     display: flex;
     list-style: none;
-    padding: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
+    color: #ffd700;
 }
 
 nav ul li a {
-    color: white;
-    margin: 20px;
+    color: #ffd700;
     text-decoration: none;
+    font-weight: 500;
 }
 
-section {
-    background-size: 50%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(image.png);
+
+/* Hover effect without transition */
+
+nav ul li a:hover {
+    color: green;
+    box-shadow: 10px 10px 10px darkgreen;
+    /* Green  on hover */
+}
+
+
+/* === HERO SECTION === */
+
+
+/* Hero section with dark overlay */
+
+.hero {
+    background: linear-gradient(rgba(11, 24, 37, 0.8), rgba(13, 27, 42, 0.8)), url('banking.jpeg') no-repeat center center/cover;
+    background-size: 100%;
+    color: #ffffff;
     text-align: center;
     padding: 100px 0;
-    border-image-repeat: none;
+    height: 100vh;
+    border-bottom: 10px solid darkgreen;
 }
 
-h1 {
-    color: white;
-    padding-top: 100px;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #ffd700;
+    box-shadow: 0px 10px 10px 0px darkgreen;
+    font-weight: bold;
 }
 
-p {
-    color: white;
-    padding: 20px;
-    font-size: 20px;
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+
+/* Button styling */
+
+.btn {
+    display: inline-block;
+    background-color: darkgreen;
+    /* Dark green */
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 5px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px #ffd700;
+}
+
+
+/* === FEATURES SECTION === */
+
+.features {
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 5px #ffd700;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffd700;
+    border-bottom: 5px #ffd700;
+    /* Gold for section titles */
+}
+
+.features-grid {
+    display: flex;
+}
+
+
+/* Feature cards with dark background */
+
+.feature-card {
+    margin: 20px;
+    background-color: #1e1e1e;
+    /* Dark card background */
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px darkgreen;
+    border: 1px solid #333333;
+    /* Subtle border */
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #ffd700;
+    /* Gold icons */
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+.feature-card p {
+    color: #b0b0b0;
+    /* Light gray text */
+}
+
+
+/* === FOOTER STYLES === */
+
+footer {
+    background-color: #0d1b2a;
+    /* Dark blue */
+    color: #ffffff;
+    padding: 50px 0 20px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-content {
+    padding: 80px 0;
+}
+
+.about-section {
+    margin-bottom: 50px;
+}
+
+.about-section h2 {
+    color: #ffd700;
+    /* Gold headings */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffd700;
+    /* Gold border */
+    padding-bottom: 10px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.value-card {
+    background-color: #1e1e1e;
+    /* Dark card background */
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid #333333;
+    /* Subtle border */
+}
+
+.value-card h3 {
+    color: #2e7d32;
+    /* Green for value headings */
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: #b0b0b0;
+    /* Light gray text */
+}
+
+
+/* === SERVICES PAGE STYLES === */
+
+.services-content {
+    padding: 80px 0;
+}
+
+.service-card {
+    background-color: #1e1e1e;
+    /* Dark card background */
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333333;
+    /* Subtle border */
+}
+
+.service-card h3 {
+    color: #ffd700;
+    /* Gold headings */
+    margin-bottom: 15px;
+}
+
+.service-features {
+    margin: 20px 0;
+}
+
+.service-features li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #b0b0b0;
+    /* Light gray text */
+}
+
+.service-btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+
+/* === CONTACT PAGE STYLES === */
+
+.contact-content {
+    padding: 80px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: #1e1e1e;
+    /* Dark card background */
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333333;
+    /* Subtle border */
+}
+
+.contact-info h3 {
+    color: #ffd700;
+    /* Gold headings */
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    color: #b0b0b0;
+    /* Light gray text */
+}
+
+.contact-form {
+    background-color: #1e1e1e;
+    /* Dark card background */
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333333;
+    /* Subtle border */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #ffffff;
+    /* White labels */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444444;
+    /* Dark border */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #2d2d2d;
+    /* Dark input background */
+    color: #ffffff;
+    /* White text */
+}
+
+textarea.form-control {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #1b5e20;
+    /* Dark green */
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #2e7d32;
+    /* Lighter green */
+}
+
+
+/* === MEMBERS PAGE STYLES === */
+
+.members-content {
+    padding: 80px 0;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.member-card {
+    background-color: #1e1e1e;
+    /* Dark card background */
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid #333333;
+    /* Subtle border */
+}
+
+.member-card h3 {
+    color: #ffd700;
+    /* Gold headings */
+    margin-bottom: 15px;
+}
+
+.benefits-list {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #b0b0b0;
+    /* Light gray text */
+}
+
+.registration-form {
+    background-color: #1e1e1e;
+    /* Dark card background */
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    border: 1px solid #333333;
+    /* Subtle border */
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
 }

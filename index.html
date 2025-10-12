@@ -2,38 +2,85 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>BBC SACCO - Home</title>
+
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="container">
-            <!--logo-->
+        <div class="header-container">
+            <!-- Logo -->
             <div class="logo">
-                Code Wise Academy
+                BBC <span>SACCO</span>
             </div>
+            <!--am using span to group it separetly to provide different colour-->
+
+            <!-- Navigation Menu -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="members.html">Members</a></li>
                 </ul>
             </nav>
         </div>
-
-
     </header>
 
-    <section>
-        <h1>Learn Coding, Build Your Future</h1>
-        <P>
-            Code Wise Academy helps students and developers master web development,<br> mobile apps, and software systems through practical, project-based learning.
-        </P>
+    <!-- Hero  Section this is the font landing part of my site  it must have ablur background image -->
+    <section class="hero">
+        <div class="container">
+            <h1>Building Financial Security Together</h1>
+            <p>BBC SACCO provides reliable savings and credit services to help you achieve your financial goals. Join our cooperative today and secure your future.</p>
+            <a href="members.html" class="btn">Become a Member</a>
+        </div>
     </section>
 
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose BBC SACCO?</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <!--Am giving the i cons feature-icon class to resize them very well -->
+                    <h3>Secure Savings</h3>
+                    <p>Grow your savings with competitive interest rates and secure investment options tailored to your needs.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Affordable Loans</h3>
+                    <p>Access low-interest loans for education, business, housing, and other personal needs with flexible repayment terms.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Member Ownership</h3>
+                    <p>As a member, you're part-owner of the SACCO with voting rights and a share in the annual dividends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>@ 2025 BBC SACCO. All Rights Reserved.</p>
+        </div>
+
+    </footer>
 </body>
 
 </html>
